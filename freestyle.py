@@ -1,4 +1,6 @@
 import math
+
+# Written Assignment
 def new_line():
     print('Line')
 
@@ -28,7 +30,8 @@ clearScreen()
     
     
 
-
+# Learning Journal 
+#Question 1
 def print_volume(r):
     return 4/3*(math.pi*(r**3))
     
@@ -40,7 +43,21 @@ print("\nThe volume of the sphere of radius 9 is " + str(print_volume(9)) + "\n"
 
 
 
-# This section is for the discussion assignment 
+# Question 2
+def FootballStatistics(playerName, goals , assists ):
+    print("\nThe total number of goals scored by " + playerName + " this year are " + str(goals) + " goals")
+    print("The total number of assists given by " + playerName + " this year are " + str(assists) + " assists\n") 
+    
+    
+FootballStatistics("Cristiano Ronaldo", 60, 25)
+FootballStatistics("Kylian Mbappe", 40, 10)
+FootballStatistics("Lionel Messi", 55, 35)
+
+
+
+
+
+# This section is for the Discussion Assignment 
 # Question 1 & 2
 def i_will_take_your_arguments(name):
     print("Hello Hero "+ str(name) + "\n")
