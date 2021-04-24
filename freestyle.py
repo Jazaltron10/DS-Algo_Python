@@ -45,8 +45,8 @@ print("\nThe volume of the sphere of radius 9 is " + str(print_volume(9)) + "\n"
 
 # Question 2
 def FootballStatistics(playerName, goals , assists ):
-    print("\nThe total number of goals scored by " + playerName + " this year are " + str(goals) + " goals")
-    print("The total number of assists given by " + playerName + " this year are " + str(assists) + " assists\n") 
+    print("\nThe total number of goals scored by " + playerName + " this year is " + str(goals) + " goals")
+    print("The total number of assists given by " + playerName + " this year is " + str(assists) + " assists\n") 
     
     
 FootballStatistics("Cristiano Ronaldo", 60, 25)
