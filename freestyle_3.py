@@ -1,45 +1,22 @@
-import math
-# Question 1
-print ('Hello world \n')
+List =  [54, 62, 93, 17, 31, 65, 23, 32, 98, 20, 79, 69, 89, 26, 27, 22,29, 100, 1, 2, 57, 28, 88, 3, 50, 67, 37, 1, 32, 20, 97]
 
-def print_volume(r):
-    volume = 4/3 * (math.pi * (r**3))
-    print(str(volume))
-
-
-volume_ten = 10
-print_volume(volume_ten)    # Input 1: calling a function with a variable
-print_volume(10*2)          # Input 2: calling a function with an expression 
-print_volume(10+2)          # Input 3: calling a function with an expression 
-
-# Outputs
-# 4188.79020478639     
-# 33510.32163829112    
-# 7238.229473870882     
+def quicksort(values):
+    if len(values) <= 1:
+        return values 
     
+    less = []
+    greater = []
+    pivot = values[0]
     
-    
-# Question 2
-def FootballStatistics(playerName, goals , assists ):
-    print("\nThe total number of goals scored by " + playerName + " this year is " + str(goals) + " goals")
-    print("The total number of assists given by " + playerName + " this year is " + str(assists) + " assists\n") 
-    
-
-# Input:  calling a function with multiple values/arguments     
-FootballStatistics("Cristiano Ronaldo", 60, 25)   
-FootballStatistics("Kylian Mbappe", 40, 10)       
-FootballStatistics("Lionel Messi", 55, 35)        
-FootballStatistics("Ousmane Dembele", 5, 3)        
+    for value in values[1:]:
+        if value <= pivot:
+            less.append(value)
+        else:
+            greater.append(value)
+    return quicksort(less) + [pivot] + quicksort(greater)
 
 
-# Outputs
-# The total number of goals scored by Cristiano Ronaldo this year is 60 goals
-# The total number of assists given by Cristiano Ronaldo this year is 25 assists
+sorted_list = quicksort(List)
+print(sorted_list)
 
 
-# The total number of goals scored by Kylian Mbappe this year is 40 goals
-# The total number of assists given by Kylian Mbappe this year is 10 assists
-
-
-# The total number of goals scored by Lionel Messi this year is 55 goals
-# The total number of assists given by Lionel Messi this year is 35 assists   

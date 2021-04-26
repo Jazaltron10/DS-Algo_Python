@@ -1,6 +1,7 @@
 List =  [54, 62, 93, 17, 31, 65, 23, 32, 98, 20, 79, 69, 89, 26, 27, 22,29, 100, 1, 2, 57, 28, 88, 3, 50, 67, 37, 1, 32, 20, 97]
 
 
+
 def merge(values):
     if len(values) <= 1:
         return values
@@ -30,5 +31,32 @@ def merge(values):
 final_list = merge(List)
 print(final_list)            
         
-    
-    
+""" def mergesort(values):
+    if len(values) <= 1:
+        return values
+
+    mindex = len(values)//2
+
+    leftside = mergesort(values[:mindex])
+    rightside = mergesort(values[mindex:])
+
+
+    sorted_list = []
+
+    lindex = 0 # this helps to keep track of the index position on the leftside 
+    rindex = 0 # this helps to keep track of the index position on the rightside 
+
+    while lindex < len(leftside) and rindex < len(rightside):
+        if leftside[lindex] < rightside[rindex]:
+            sorted_list.append(leftside[lindex])
+            lindex += 1
+        else:
+            sorted_list.append(rightside[rindex])
+            rindex += 1
+        sorted_list += leftside[lindex:]
+        sorted_list += rightside[rindex:]
+        return sorted_list
+
+
+final_list = mergesort(List)
+print(final_list) """

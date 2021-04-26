@@ -6,16 +6,19 @@ def merge_sort(values):
         return values
     
     middle_index = len(values) // 2
-    # Now we use the python slice syntax to get the left half of the list
+    # Now we use the python slice syntax to get the left half of the list as well as the right half
     """
     So basically the merge_sort function just splits any list passed into it when it is being called recursively, be it the right or left list
     """
     
     left_values = merge_sort(values[:middle_index])
     right_values = merge_sort(values[middle_index:])
-    print("%15s %-15s" % (left_values, right_values))
+    
+    # print("%15s %-15s" % (left_values, right_values))
     # we'll create a list to hold the sorted values 
+    
     sorted_values = []
+    
     # Now we get to merge the two split halves while sorting them 
     # we'll be moving from left to right 
     left_index = 0  # helps us keep track of our position in the left half of the list
