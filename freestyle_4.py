@@ -1,34 +1,71 @@
-List =  [54, 62, 93, 17, 31, 65, 23, 32, 98, 20, 79, 69, 89, 26, 27, 22,29, 100, 1, 2, 57, 28, 88, 3, 50, 67, 37, 1, 32, 20, 97]
+list = [-50, -13, -2, -1, 0, 0, 1, 1, 2, 3, 19, 20]
+
+def sortedSquaredArray(array):
+    # Write your code here.
+    exponent = []
+    newitem = 0
+    
+    for item in array:
+        newitem = item**2
+        exponent.append(newitem)
+    
+    return exponent
+
+	
+newlist = sortedSquaredArray(list)
+print(newlist)
 
 
-def merge(values):
-    if len(values) <= 1:
-        return values
+def quicksort(newlist):
+    if len(newlist) <= 1:
+        return newlist
     
-    mindex = len(values) // 2
+    lesser = []
+    greater = []
+    pivot = newlist[0]
     
-    left_side = merge(values[:mindex])
-    right_side = merge(values[mindex:])
     
-    sorted_list = []
-    
-    lindex = 0 # this keeps track of the positional index on the left side 
-    rindex = 0 # this keeps track of the positional index on the right side
-    
-    while lindex < len(left_side) and rindex < len(right_side):
-        if left_side[lindex] < right_side[rindex]:
-            sorted_list.append(left_side[lindex])
-            lindex += 1
+    for anitem in newlist[1:]:
+        if anitem <= pivot:
+            lesser.append(anitem)
         else:
-            sorted_list.append(right_side[rindex])
-            rindex += 1
-    sorted_list += left_side[lindex:]
-    sorted_list += right_side[rindex:]
-    return sorted_list
+            greater.append(anitem)
+    return quicksort(lesser) + [pivot] + quicksort(greater)
 
 
-final_list = merge(List)
-print(final_list)            
-        
-    
-    
+print(quicksort(newlist))
+
+
+
+
+
+
+# This is some code for the Ackerman Function 
+def ack(m, n):
+    if m == 0:
+        return n + 1
+    elif m > 0 and n == 0:
+        return ack(m-1, 1)
+    elif m > 0 and n > 0:
+        return ack(m-1, ack(m, n-1))
+
+
+Ackerman_Function = ack(3,4)
+print(Ackerman_Function)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -6,22 +6,28 @@ if a is divisible by b
 and also a/b is a power of b
 """
 
-def is_power(a,b):
-    print((10 + is_divisible(a,b))*3)
-    
-    
 def is_divisible(x,y):
-    return x + y
+    return  x % y == 0
+
+
+def is_power(a,b):
+    if is_divisible(a,b):
+        print("hello world")
+    else:
+        print("my name is")
+    
+    
 
 # is_power(5,6)
 
 
-#Fermat Theorem 
+# Fermat Theorem 1
 
 # a = int(input())
 # b = int(input())
 # c = int(input())
 # n = int(input())
+
 
 def check_fermat(a,b,c,n):
     if n >= 2 and (a**n + b**n == c**n):
@@ -34,7 +40,7 @@ def check_fermat(a,b,c,n):
 
 
 
-
+"""
 # The Triangle
 side_a = int(input())
 side_b = int(input())
@@ -48,6 +54,64 @@ def is_triangle(a, b, c):
         
         
 is_triangle(side_a, side_b, side_c)
-
+"""
 
 # The Recursion Exercise 
+
+
+list =[54, 62, 93, 17, 31, 65, 23]
+
+# This is another quicksort attempt 
+
+def quickie(list):
+    if len(list) <= 1:
+        return list 
+    
+    lesser = []
+    greater = []
+    pivot = list[0]
+    
+    
+    for item in list[1:]:
+        if item <= pivot:
+            lesser.append(item)
+        else:
+            greater.append(item)
+    
+    return quickie(lesser) + [pivot] + quickie(greater)
+
+
+print(quickie(list))
+
+
+
+
+def merge(list):
+    if len(list) <= 1:
+        return list
+    
+    mindex = len(list)//2
+    
+    lside = merge(list[:mindex])
+    rside = merge(list[mindex:])
+    
+    sorted_list = []
+    lindex = 0 # this keeps track of the positional index on the left side of the list 
+    rindex = 0 # this keeps track of the positional index on the right side of the list 
+    
+    
+    while lindex < len(lside) and rindex < len(rside):
+        if lside[lindex] < rside[rindex]:
+            sorted_list.append(lside[lindex])
+            lindex +=1
+        else:
+            sorted_list.append(rside[rindex])
+            rindex +=1
+    
+    sorted_list += lside[lindex:]
+    sorted_list += rside[rindex:]
+    return sorted_list
+
+print(merge(list))
+
+
