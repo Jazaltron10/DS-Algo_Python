@@ -59,7 +59,45 @@ print(Ackerman_Function)
 
 
 
+def String_Manipulation():
+    print("\nreverse\n")
+    word = "realmadrid"
+    # print(word[-10])
 
+
+    i = -1
+    while i > - (len(word)+1):
+        print(word[i])
+        i-=1
+
+
+    print("\nnormal\n")
+    r = 0
+    while r < len(word):
+        print(word[r])
+        r+=1
+
+
+
+
+    word_2 = "manchester_city_UCL"
+
+    a = -1
+    print("\nreverse\n")
+    while a > -(len(word_2)+1):
+        print(word_2[a])
+        a-=1
+
+    print("\nnormal\n")
+
+    b = 0
+    while b < len(word_2):
+        print(word_2[b])
+        b+=1
+
+
+
+String_Manipulation()
 
 
 
