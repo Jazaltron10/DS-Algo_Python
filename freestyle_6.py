@@ -163,6 +163,139 @@ print(a is b)
 In this example python only created one string object, and both a and b refer to it.
 But when you create two lists, you get two objects:
 """
+ali = [1, 2, 3, 4, 5, 6, 7, 8]
+bli = [1, 2, 3, 4, 5, 6, 7, 8]
+
+print("is ali, bli",ali is bli) # in this case the two lists are equivalent but not identical because they are not the same object
+
+"""
+NOTE:
+if two objects are identical, they are also equivalent, but if they are not necessarily identical.
+
+THE DIFFERENCE BTW OBJECTS AND VALUES 
+Until now, we have been using “object” and “value” interchangeably, but it is more precise
+to say that an object has a value. If you evaluate [1, 2, 3], you get a list object whose
+value is a sequence of integers. If another list has the same elements, we say it has theṇ
+same value, but it is not the same object
+"""
+
+print([1,2,3])
+
+# ALIASING
+
+cli = [4,5,6]
+dli = cli
+eli = dli
+fli = eli
+print(dli is cli)
+print(cli is dli)
+print(eli is dli)
+print(fli is eli)
+print(fli is cli)
+
+print(fli)
+
+dli.append(7)
+print(cli)
+"""
+The association of a variable with an object is called a reference
+In the above example there are two references to the same object which are cli and dli
+
+In the case of Aliasing an object with more than one reference has more than one name, and so therefore we say that the object is aliased.
+this is seen in the example above where the object [4,5,6] is aliased by several variables.
+
+if the aliased object is mutable, changes made with one alias will affect the others.
+
+Strings and other primitive data types are immutable and so it almost never makes a difference whether a and b refer to the same string or not in the case of a banana object or value.
+"""
+
+
+print("\n\nLIST ARGUMENTS SECTION")
+"""
+it is important to distinguish between operations that create new lists and those that only modify a list
+The " + " creates a new list  while the  append method modifies a list
+The return value from append is None 
+
+"""
+# append a list
+t1 = [1, 2, 3]
+t2 = t1.append(4)
+print(t1) # will give [1, 2, 3, 4]
+print(t2) # will give None
+
+# the + operator 
+t3 = t1 + [5]
+print(t1) # will give [1, 2, 3, 4]
+print(t3) # will give [1, 2, 3, 4, 5]
+
+
+# Functions that modify lists
+
+t4 = [1, 2, 3, 4, 5, 6, 7, 8]
+def bad_delete_head(t):
+    t = t[1:] # the slicing operator won't work here in deleting the first element of this list.
+
+bad_delete_head(t4)
+print(t4)
+
+
+# Alternative
+
+def tail(t):
+    return t[1:]
+
+
+rest = tail(t4)
+print(rest)
+
+
+"""
+PITFALLS
+
+
+
+
+
+"""
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
