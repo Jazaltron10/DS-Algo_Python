@@ -41,7 +41,35 @@ for fruit in ['a', 'b', 'c', 'd']:
 mylist = ["now", "four", "is", "score", "the", "and seven", "time", "years", "for"]
 print(" ".join(mylist[1::2]))
 
+print("Hello world")
+s = "help"
+for letter in s[1:]:
+    last = letter
+    break
+print(last)
 
+n = 10000
+count = 0
+while n:
+    count = count + 1
+    n = n / 10
+    n=int(n)
+print(count)
+
+def print_n(s, n):
+    if n > 0:
+        print(s)
+        print_n(s, n-1)
+    return n
+n = 3
+while print_n("hi", n):
+    print_n("there!", n)
+    n = 0
+    
+    
+    
+s = "Python3"
+print(s[len(s)])  
 
 
 
