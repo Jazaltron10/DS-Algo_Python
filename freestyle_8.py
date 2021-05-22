@@ -101,3 +101,24 @@ for i in range(1, 5):
     for u in range(1, 5):
         print("World")
 
+
+
+
+def binarySearch(array, target):
+    # Write your code here.
+
+	first = 0
+	last = len(array) - 1
+	
+	while first <= last:
+		mindex = (first + last)//2
+		midpoint = array[mindex]
+		if target == midpoint:
+			return mindex
+		elif target > midpoint:
+			first = mindex + 1
+		else: 
+			last = mindex - 1
+		if target not in array:
+			return -1
+	
