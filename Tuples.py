@@ -188,7 +188,7 @@ enum_func()
 # Using a dictionary to initialize a tuple
 dic = {'a': 1, 'b': 2, 'c': 3}
 t10 = dic.items()
-print(t10)
+print("THis is t10 ",t10)
 
 # This results in a dict_items object which is an iterator like the
 # zip object and it iterates the key-value pairs.
