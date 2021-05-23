@@ -103,6 +103,7 @@ for i in range(1, 5):
 
 
 
+arr = [1, 2, 3, 4, 5, 6, 7, 8]
 
 def binarySearch(array, target):
     # Write your code here.
@@ -121,4 +122,29 @@ def binarySearch(array, target):
 			last = mindex - 1
 		if target not in array:
 			return -1
-	
+
+
+print(binary_search(arr, 8))
+
+
+
+
+
+numbers = [1,2,3,4,5,6,7,8,9,10]
+list_names = ['david', 'john', 'mary', 'damien']
+
+name = input()
+
+def List_String_Search(list, target):
+    """
+    prints target founnd and the index it was found at else prints not in list
+    """
+    for i in range(0, len(list)):
+        if list[i] == target:
+            print(list[i], " is in the list at index ", i)
+    print(target, 'not in list')
+
+        
+
+List_String_Search(list_names, name)
+        

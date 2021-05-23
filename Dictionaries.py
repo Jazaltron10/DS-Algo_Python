@@ -129,16 +129,88 @@ print(name)
 name_inverse = invert_dict(name)
 name_1_inverse = invert_dict(name_1)
 print(name_inverse)
-print(name_1_inverse)
+print(name_1_inverse,"\n")
 
 
+# Memos
+def fibonacci(n):
+    if n == 0:
+        return 0
+    elif n == 1:
+        return 1
+    else:
+        return fibonacci(n-1) + fibonacci(n-2)
 
 
+# print(fibonacci(4))
 
 
+# fibonacci using memos
+known = {0:0, 1:1}
+def fib(n):
+    if n in known:
+        #print(known)    
+        return known[n] 
+    
+    res = fib(n-1) + fib(n-2) 
+    #print("%s" % res)
+    known[n] = res 
+    # print(known[n])
+    return res 
 
 
+print(fib(50))
+# print(fibonacci(40))
+
+# Global variables
+
+verbose = True 
+
+def example_1():
+    global verbose
+    verbose = False
+    if verbose:
+        print('Running example_1')
+
+example_1()
+# The global statement tells the interpreter something like, "In this 
+# function, when I say verbose, I mean the global variable; 
+# don't create a local one "
+count = 0
+
+def example_2():
+    # count = count + 1 
+    # Python assumes that count is local, and under that assumption you are reading it before writing it. 
+    # The solution, again, is to declare count global
+    global count 
+    count += 1
+    print(count)
+    
+    
+example_2()
 
 
+# If a global variable refers to a mutable value, 
+# you can modify the value without declaring
+# the variable:
 
+known_1 = {0:0, 1:1}
+def example_3():
+    known_1[2] = 1
+    print(known_1)
+    
+    
+example_3()
+print(known_1)
 
+# So you can add, remove and replace elements of a global list or
+# dictionary, but if you want
+# to reassign the variable, you have to declare it:
+    
+def example_5():
+    global known_1
+    known_1 = dict()
+    print(known_1)    
+
+example_5()
+print(known_1)    
