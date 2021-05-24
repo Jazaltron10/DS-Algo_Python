@@ -177,6 +177,9 @@ def enum_func():
     print('\n')
     for index, element in enumerate((1,2,3,4,5)):
         print(index, element)   # tuples
+    print('\n')
+    for index, element in enumerate({'a':1,'b':2,'c':3,'d':4}):
+        print(index, element)   # dictionaries
 
 enum_func()
 
