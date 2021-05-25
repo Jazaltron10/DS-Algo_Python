@@ -1,112 +1,225 @@
-print("Discussion Assignment")
-"""
-Meant to describe how tuples can be useful with loops over lists and Dictionaries
-When it comes to loops
-for lists, it is the elements in the lists that is iterated over or looped through. 
-While for dictionaries it is the keys that get iterated over and not the values. 
-With tuples both the index and elements of the sequence can be
-looped through and this gives the programmer flexibility to add logic to either one.
-Below are code snippets that show how the use of the tuple, for loop and various methods
-and functions can bring a whole new functionality to traversing lists and dictionaries.
-"""
 
-# We can explore the usefulness of loops using a tuple with the zip function
-print("\nThe zip function")
-"""
-One of the major functionality the tuple gives with for loops is the ability to traverse
-two list or dictionary while reassigning their values, and this is achieved using the
-zip function.
-So Basically combining the power of the zip function and a for loop i have been able to use
-tuple reassignment to reassign the values of two lists, two strings, and two dictionaries. 
-Because the zip function is an iterator and produces a tuple, this means that all the contents
-within this tuple can be traversed using a loop.
-"""
-list_10 = ['a', 'b', 'c', 'd', 'e']
-list_20 = ['apple', 'B', 'cow', 'D', 'e']
-list_30 = ['apple', 'bee', 'corn', 'dogs', 'enter']
-list_40 = [1,2,3,4,5,6,7,8,9]
-dic_5 = dict(zip(['ronaldo', 'messi', 'benzema','ramos','lewandowski'],[5,6,0,0,1]))
-dic_6 = dict(zip(['Kylian', 'Felix', 'Haaland','Sterling','Vinicius'],[5,6,0,0,1])) 
+# test_dups = ["zzz", "dog", "bookkeeper", "subdermatoglyphic", "subdermatoglyphics"]
+def histogram(st):
+    dicki = dict()
+    default = 0
+    for letter in st:
+        dicki[letter] = dicki.get(letter, default)
+        dicki[letter] += 1
+    return dicki
 
 
-def reassign(t1,t2):
-    for x , y in zip(t1,t2):
-        print(y , x)
+# name  =  histogram('caracasas')
+# print(name)
+# nam  =  histogram(['john', 'john', 'john','john', 'mary', 'james'])
+# print(nam)
+
+
+
+# def has_duplicate(string):
+#     h = histogram(string)
+#     for key, value in h.items(): # converting the dictionary h into an iterable object with the use of the items method and a tuple of the key and value.
+#         if value > 1:   # conditional to check if the string passed in has any repeated values.
+#             return True
+#     return False
+
+
+# def loop_test_1():
+#     for singleString in test_dups:
+#         if has_duplicate(singleString):
+#             print(singleString, "has duplicates")
+#         else:
+#             print(singleString, "has no duplicates")
+
+# page = histogram("catastrophic")
+# for index, element in zip(("12345678"), ("banananans")):
+#     if element > 1:
+#         print(element)# strings
         
+        
+        
+        
+        
+        
+        
+# def invert_dict(d):
+#     inverse = dict()
+#     for key in d:
+#         val = d[key]
+#         if val not in inverse:
+#             inverse[val] = [key]
+#         else:
+#             inverse[val].append(key)
+#         print(inverse)
+#     return inverse
 
-reassign('james','john')
-reassign(list_10, list_20)
-reassign('zicko','annabel')
-reassign(list_30, list_40)            
-reassign(dic_5,dic_6)        
+# name = histogram('james bond')
+# name_1 = histogram('caracas')
+# print(name)
 
-"""
-So with tuples and the zip function, you can loop or traverse over two lists or dictionaries
-at the same time and also perform some value reassignment if you want to.
-"""
-
-
-print("\nThe enumerate function")
-"""
-For both a list and a dictionary you can only traverse through their values and keys
-respectively but with the built-in function enumerate and the use of tuple both the
-index and the elements can be traversed.
-Most Sequence in python if not all are Zero indexed and with the enumerate function
-when traversing through multiple sequence we get to see this(Downey, 2015).
-And if you decide to traverse through only the index and print it,
-what gets printed is stil a tuple of the index and the element.
-"""
-def enum_func():
-    print('\n')
-    for index in enumerate('John Bond'):
-        print(index)# strings
-    print('\n')
-    for index, element in enumerate(['f','g','h','i','j']):
-        print(index, element)   # lists
-    print('\n')
-    for index, element in enumerate((1,2,3,4,5)):
-        print(index, element)   # tuples
-    print('\n')
-    for index, element in enumerate({'a':"apple",'b':"ball",'c':"cat",'d':"Dog"}):
-        print(index, element)   # dictionaries
-    print('\n')
-    
-enum_func()
-
-"""
-So with the tuple and the enumerate function when iterating over a list or dictionary
-the loop traverses over both the index as well as the elements in each respective sequence.
-"""
+# name_inverse = invert_dict(name)
+# name_1_inverse = invert_dict(name_1)
+# print(name_inverse)
+# print(name_1_inverse,"\n")
 
 
 
-print("\nThe items method")
+
+# name : [animal type, age, sex]
+clubs = {
+    "Real Madrid": ["League", 34],
+    "Barcelona": ["League", 26],
+    "Bayern Munich":["League", 26],
+    "Liverpool": ["League", 20],
+    "Manchester United":["League", 20],
+}
+
+
+
+print(clubs)
+print("")
+
+
+print("\nPrinting the inverse\n")
+def invert(d):
+    inverse = dict()
+    for key in d:
+        val = d[key]
+        for item in val:
+            if item not in inverse:
+                inverse[item] = [key]
+            else:
+                inverse[item].append(key)
+
+    print(inverse)
+    return inverse 
+
+
+i_clubs = invert(clubs)
+print(i_clubs)
+
+print("\n")
+def invert_dict(d):
+    inverse = dict()
+    for key in d:
+        val = d[key]
+        if val not in inverse:
+            inverse[val] = [key]
+        else:
+            inverse[val].append(key)
+        print(inverse)
+    return inverse
+
+
+name_1 = histogram('caracas')
+name_1_inverse = invert_dict(name_1)
+print(name_1_inverse,"\n")
+
+
+
+
+
+# name : [animal type, age, sex]
+animal_shellter = {
+    "Teddy": ["dog",4,"male"],
+    "Elvis": ["dog",1,"male"],
+    "Sheyla": ["dog",5,"female"],
+    "Topic": ["hamster",3,"male"],
+    "Kuzya": ["cat",10,"male"],
+    "Misi": ["cat",8,"female"],
+}
+
+
+print(animal_shellter)
+print("")
+
+
+def invert(d):
+    inverse = dict()
+    for key in d:
+        val = d[key]
+        for item in val:
+            if item not in inverse:
+                inverse[item] = [key]
+            else:
+                inverse[item].append(key)
+    return inverse 
+
+
+inverted_shellter = invert(animal_shellter)
+print(inverted_shellter)
+
+
+
+
+print("Week 7 Learning Journal\n")
+# Cluba and Leagues in Europe
+# BreakDown Of My dictionary -> ClubName : [Domestic League Name, Total League Trophies,]
+clubs = {
+    "Real Madrid": ["La liga", 36],
+    "Barcelona": ["La liga", 26],
+    "Bayern Munich":["Bundesliga", 26],
+    "Juventus":["Serie A", 36],
+    "Inter Milan":["Serie A", 20],
+    "Liverpool": ["Epl", 20],
+    "Manchester United":["Epl", 20],
+    "Ajax":["Eredivisie", 36],
+}
+
+
+
+print("\nPrinting The Original Dictionary")
+print(clubs)
+# Code Explanation
 """
-With the items method the key and value are presented in the form of a tuple and can be
-traversed with a loop, because the items method is a method that
-returns a sequence of tuples,where each tuple is a key-value pair this
-results in a dict_items object which is an iterator like the zip object
-and it iterates the key-value pairs(Downey, 2015).
-Further operations can be performed on all key-value pairs simultaneously in the loop.
-Now if you try to loop through the dictionary without the items method
-you get a ValueError like this:
-ValueError: not enough values to unpack (expected 2, got 1)     
-"""    
-dicki = dict(zip(('X', 'Y', 'Z'),('Albert','Bonquino','Carter'))) # tuple -> tuple
-print(dicki)
-for key, value in dicki.items():
-    newval = value.upper()
-    newkey = key.lower()
-    print(newkey, newval)
-    
-    
-    
+Below is a modified version of the original inverted function. 
+because lists are mutable they cannot be used as keys in a dictionary, and when 
+I tried it I kept getting a Type Error like this:
+TypeError: unhashable type: 'list'
+so I had to come up with a way to access the elements in the list and turn them into keys 
+the newly created dictionary.
+I was able to achieve this by introducing another for loop inside the already existing for a loop.
+This new for loop was meant to loop through each item in the value of the original dictionary which is a list 
+and while looping through it check to see if the contents of the list are already in the new dictionary, 
+if they were not, I would make each element the key in the new dictionary, and since the elements are primitive
+data types of string and integer are hashable and can therefore be used as keys in the new dictionary, 
+and I would also pass the key of the original dictionary into a list and assign it to the value of the new dictionary.
+Now if the element(key) already exists in the new dictionary, I would then append the new values, to the
+values(which is a list of the key of the original dictionary) of that key that already exists.
 """
-Please I have attached my python source code to my submission feel free to run it 
-References:
-Downey, A. (2015). Think Python: How to think like a computer scientist. 
-Green Tea Press. https://my.uopeople.edu/mod/page/view.php?id=241793
-"""    
-    
-    
-    
+def invert(dictionary):
+    inverse = dict()    # creating new inverted dictionary
+    for key in dictionary: # looping through original dictionary's keys
+        value = dictionary[key] # assigning the value(which is a list) of the original dictionary to a new variable
+        for element in value:   # Looping through the value of the original dictionary(which is a list)
+            if element not in inverse:  # checking to see if items in list are in the new dictionary
+                inverse[element] = [key] # passing the key of original dictionary to a list and assigning it to the value of the new dictionary
+            else:
+                inverse[element].append(key) # adding the new values(which is a list) that belong to a key that already exists in the new dictionary 
+
+    #print(inverse)
+    return inverse   # returning the new dictionary with its key and list of values 
+
+
+i_clubs = invert(clubs)
+print("\n\nPrinting The Inverted Dictionary")
+print(i_clubs)   # printing invert dictionary
+
+
+
+
+"""
+Describe what is useful about your dictionary. Then describe whether the inverted dictionary is
+useful or meaningful, and why.
+
+What is Useful about my dictionary:
+My dictionary stores all the names of popular football clubs as the key 
+and it stores in a list the various domestic leagues they play in as well 
+as their all-time trophies count in winning their league.
+
+What is useful about the Inverted dictionary:
+My inverted dictionary is useful because it serves as a filter across all the 
+clubs and their respective leagues in the original dictionary.
+now with my inverted dictionary, I can see which clubs play in the same league and
+also which clubs have the same amount of trophies in their respective leagues.
+"""
