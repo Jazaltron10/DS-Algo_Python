@@ -1,40 +1,39 @@
-def first():
-    a = ['Annie', 'Bonnie', 'Connie', 'Donnie', 'Emmie']
-    b = [1991, 1992, 1993, 1994, 1995]
 
-    print ('Demonstrating tuples')
+a = ['Annie', 'Bonnie', 'Connie', 'Donnie', 'Emmie']
+b = [1991, 1992, 1993, 1994, 1995]
 
-    def comb_tupl (x, y):
-        c = list (zip (x, y))
-        print (c)
-        return c
+print ('Demonstrating tuples')
 
-    comb_tupl (a, b)
+def comb_tupl (x, y):
+    c = list (zip (x, y))
+    print (c)
+    return c
 
-    print ('\nDemonstrating list')
+comb_tupl (a, b)
+print ('\nDemonstrating list')
 
-    def comb_lst (x, y):
-        c = []
-        for i in x:
-            index = x.index (i)
-            d = [i, y[index]]
-            c.append (d)
-        print (c)
-        return c
+def comb_lst (x, y):
+    c = []
+    for i in x:
+        index = x.index (i)
+        d = [i, y[index]]
+        c.append (d)
+    print (c)
+    return c
 
-    comb_lst (a, b)
+comb_lst (a, b)
+print ('\nDemonstrating dictionary')
 
-    print ('\nDemonstrating dictionary')
+def comb_dict (x, y):
+    c = dict ()
+    for i in x:
+        index = x.index (i)
+        c[i] = y[index]
+    print (c)
+    return c
 
-    def comb_dict (x, y):
-        c = dict ()
-        for i in x:
-            index = x.index (i)
-            c[i] = y[index]
-        print (c)
-        return c
 
-    comb_dict (a, b)
+comb_dict (a, b)
 
 
 
