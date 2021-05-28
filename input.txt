@@ -1,5 +1,5 @@
-Real Madrid, Barcelona, Bayern Munich, Juventus, Inter Milan, Liverpool, Manchester United, Ajax
-La liga, 36, La liga, 26, Bundesliga, 26, Serie A, 36, Serie A, 20, Epl, 20, Epl, 20, Eredivisie, 36
+Real Madrid, Barcelona, Bayern Munich, Juventus, Inter Milan, Liverpool, Manchester United, Ajax, Manchester City, Chelsea, AC Milan
+La liga, 36, La liga, 26, Bundesliga, 26, Serie A, 36, Serie A, 20, Epl, 20, Epl, 20, Eredivisie, 36, Epl, 5, Epl, 5, Serie A, 20
 
 
 
@@ -8,6 +8,8 @@ La liga, 36, La liga, 26, Bundesliga, 26, Serie A, 36, Serie A, 20, Epl, 20, Epl
 
 
 
+
+,
 
 ["La liga", 36], ["La liga", 26], ["Bundesliga", 26], ["Serie A", 36], ["Serie A", 20], ["Epl", 20], ["Epl", 20], ["Eredivisie", 36]
 

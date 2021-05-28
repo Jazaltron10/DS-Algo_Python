@@ -16,7 +16,7 @@ def read_file():
             break
 
             
-# read_file()
+read_file()
             
 def write_file():
     fout = open('words.txt', 'w')
@@ -58,7 +58,7 @@ def write_file_2():
     fout.write("\nThe inverted Dictionary is %s -> " %dicki)
     
 
-#write_file_2()
+write_file_2()
 
 
 
@@ -69,14 +69,14 @@ def write_file_2():
 def write_file_3():
     fin = open('input.txt')
     line1 = fin.readline().strip()
-    #print(line1)
-    # line2 = fin.readline().strip()
-    # print(line2)
-    # line3 = fin.readline().strip()
-    # print(line3)
-    # line4 = fin.readline().strip()
-    # print(line4)
-    
+    print(line1)
+    line2 = fin.readline().strip()
+    print(line2)
+    line3 = fin.readline().strip()
+    print(line3)
+    line4 = fin.readline().strip()
+    print(line4)
+
     line = " " 
     i = 1
     while i <= 10:
@@ -84,10 +84,11 @@ def write_file_3():
         i += 1
     
 
-#write_file_3()
+write_file_3()
 
 
 
+# A Brute force Solution To The Problem
 def write_file_4():
     fin = open('input.txt')
     key = fin.readline().strip()
@@ -176,41 +177,81 @@ def write_file_4():
     inverted_dictionary = invert(original_dictionary)
     print("\n\nPrinting The Inverted Dictionary")
     print(inverted_dictionary)   
-    fout = open('words.txt', 'w')
-    fout.write("\nThe inverted Dictionary is being printed out to the words.txt file \n  ->  %s" % inverted_dictionary)
+    fout = open('test.txt', 'w')
+    fout.write("The inverted Dictionary is being printed out to the test.txt file \n  ->  %s" % inverted_dictionary)
 
 
 write_file_4()
 
 
 
+# A much more optimised Solution to the problem 
+def test():
+    fin = open('input.txt')
+    key = fin.readline().strip()
+    print(key, type(key))
+    newkey = key.split(', ')
+    print(newkey[0])
+    print(newkey, type(newkey), "\n")
+    
+    
+    
+    values = fin.readline().strip()
+    print(values, type(values))
+    newvalues = values.split(', ')
+    print(newvalues[0], newvalues[1] )
+    print(newvalues, type(newvalues),len(newvalues),"\n")
+    
+    
+    newlist = []
+    
+    i = 0
+    j = 1
+    print(newlist)
+    while i < 15:
+        print(i , j)
+        newlist.append([newvalues[i]] + [int(newvalues[j])])
+        i +=2
+        j +=2
+    print(newlist, type(newlist),"\n\n\n")
+    
+    print("Printing The Original Dictionary")
+    original_dictionary = dict(zip(newkey, newlist))
+    print(original_dictionary, type(original_dictionary))
 
-def write_file_5():
-    dic_4 = zip('1234', 'mary') # string -> list
-    for i in dic_4:
-        print(i)
-        print(dic_4)
-    jas = dict(zip( i, ('rank', 'clay', 'jak', 'soak')))
-    print(jas)
+    def invert(dictionary):
+        inverse = dict()   
+        for key in dictionary:
+            value = dictionary[key]
+            for element in value:  
+                if element not in inverse:  
+                    inverse[element] = [key]
+                else:                           
+                    inverse[element].append(key)
 
-#write_file_5()
+        #print(inverse)
+        return inverse  
 
-
-
-
-
-
-
-
-
-
-
+    inverted_dictionary = invert(original_dictionary)
+    print("\n\nPrinting The Inverted Dictionary")
+    print(inverted_dictionary)   
+    fout = open('test.txt', 'w')
+    fout.write("The inverted Dictionary is being printed out to the test.txt file \n  ->  %s" % inverted_dictionary)
 
 
 
+test()
 
 
-
-
-
-
+# ileft =[]
+# jright =[]
+# lisad = [1, '2', 3, '4', 5, '6', 7, '8']
+# plisa = ['a', 'b', 'c', 'd', 'e', 'f', 'g']
+# while i < 8:
+#     print(i , j)
+#     complicado = ileft + jright
+#     ileft.append([newvalues[i]])
+#     jright.append([int(newvalues[j])])
+#     i +=2
+#     j +=2
+# print(complicado)
