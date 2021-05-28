@@ -1,0 +1,2 @@
+
+The inverted Dictionary is  ->  {'La liga': ['Real Madrid', 'Barcelona'], 36: ['Real Madrid', 'Juventus', 'Ajax'], 26: ['Barcelona', 'Bayern Munich'], 'Bundesliga': ['Bayern Munich'], 'Serie A': ['Juventus', 'Inter Milan'], 20: ['Inter Milan', 'Liverpool', 'Manchester United'], 'Epl': ['Liverpool', 'Manchester United'], 'Eredivisie': ['Ajax']}

@@ -107,3 +107,31 @@ String_Manipulation()
 
 
 
+"""
+apple 
+bag 
+carrot 
+donkey 
+eagle 
+ferrari 
+garden 
+house 
+ice
+jungle 
+kite
+lamborghini 
+mountain 
+nevada 
+orange 
+pastry 
+queen 
+ranger 
+sleek 
+television 
+umbrella 
+vanguard 
+watermelon 
+x-ray 
+yatch 
+zebra
+"""
