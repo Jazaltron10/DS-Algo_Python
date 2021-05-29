@@ -55,7 +55,7 @@ def write_file_2():
     dicki = dict(zip((1,2,3,4,5),('anjani', 'cadoga', 'smilokiva', 'jipeeta', 'karaskovich')))
     print('\n', dicki)
     
-    fout.write("\nThe inverted Dictionary is %s -> " %dicki)
+    fout.write("The inverted Dictionary is %s -> " %dicki)
     
 
 write_file_2()
@@ -178,7 +178,7 @@ def write_file_4():
     print("\n\nPrinting The Inverted Dictionary")
     print(inverted_dictionary)   
     fout = open('test.txt', 'w')
-    fout.write("The inverted Dictionary is being printed out to the test.txt file \n  ->  %s" % inverted_dictionary)
+    fout.write("The inverted Dictionary is being printed out to the test.txt file \n ->  %s" % inverted_dictionary)
 
 
 write_file_4()
