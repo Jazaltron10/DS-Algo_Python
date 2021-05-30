@@ -152,7 +152,7 @@ write_file_5()
 
 # Catching Exceptions
 def write_file_6():
-
+    pass
 
 
 
