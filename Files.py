@@ -35,7 +35,7 @@ write_file()
 """
 The argument of write has to be a string, so if we want to put other valurs in a file, we have to convert them to strings. The easiest way to do that is with str:
 """
-
+# Writing to a file 
 def write_file_2():
     fout = open('words.txt', 'w')
     x = 52
@@ -65,7 +65,7 @@ write_file_2()
 
 
 
-
+# Reading From a file 
 def write_file_3():
     fin = open('input.txt')
     line1 = fin.readline().strip()
@@ -87,171 +87,96 @@ def write_file_3():
 write_file_3()
 
 
-
-# A Brute force Solution To The Problem
 def write_file_4():
-    fin = open('input.txt')
-    key = fin.readline().strip()
-    print(key, type(key))
-    newkey = key.split(', ')
-    print(newkey[0])
-    print(newkey, type(newkey), "\n")
-    
-    
-    
-    values = fin.readline().strip()
-    print(values, type(values))
-    newvalues = values.split(', ')
-    print(newvalues[0], newvalues[1] )
-    print(newvalues, type(newvalues),len(newvalues),"\n")
+    fout = open('FilesOut.txt', 'w')
+    # Error 1 TypeError
 
 
-    newlist = []
-    club1 = []
-    club1.append(newvalues[0])
-    club1.append(int(newvalues[1]))
-    print(club1, type(club1))
-    
-    club2 = []
-    club2.append(newvalues[2])
-    club2.append(int(newvalues[3]))
-    print(club2, type(club2))
-    
-    club3 = []
-    club3.append(newvalues[4])
-    club3.append(int(newvalues[5]))
-    print(club3, type(club3))
-    
-    club4 = []
-    club4.append(newvalues[6])
-    club4.append(int(newvalues[7]))
-    print(club4, type(club4))
-    
-    club5 = []
-    club5.append(newvalues[8])
-    club5.append(int(newvalues[9]))
-    print(club5, type(club5))
-    
-    club6 = []
-    club6.append(newvalues[10])
-    club6.append(int(newvalues[11]))
-    print(club6, type(club6))
-    
-    club7 = []
-    club7.append(newvalues[12])
-    club7.append(int(newvalues[13]))
-    print(club7, type(club7))
-    
-    club8 = []
-    club8.append(newvalues[14])
-    club8.append(int(newvalues[15]))
-    print(club8, type(club8))
-    
-    
-    newlist.append(club1)
-    newlist.append(club2)
-    newlist.append(club3)
-    newlist.append(club4)
-    newlist.append(club5)
-    newlist.append(club6)
-    newlist.append(club7)
-    newlist.append(club8)
-    print(newlist, type(newlist),"\n\n\n")
-    
-    original_dictionary = dict(zip(newkey, newlist))
-    print(original_dictionary, type(original_dictionary))
 
-    def invert(dictionary):
-        inverse = dict()   
-        for key in dictionary:
-            value = dictionary[key]
-            for element in value:  
-                if element not in inverse:  
-                    inverse[element] = [key]
-                else:                           
-                    inverse[element].append(key)
-
-        #print(inverse)
-        return inverse  
-
-    inverted_dictionary = invert(original_dictionary)
-    print("\n\nPrinting The Inverted Dictionary")
-    print(inverted_dictionary)   
-    fout = open('test.txt', 'w')
-    fout.write("The inverted Dictionary is being printed out to the test.txt file \n ->  %s" % inverted_dictionary)
 
 
 write_file_4()
 
-
-
-# A much more optimised Solution to the problem 
-def test():
-    fin = open('input.txt')
-    key = fin.readline().strip()
-    print(key, type(key))
-    newkey = key.split(', ')
-    print(newkey[0])
-    print(newkey, type(newkey), "\n")
+import os 
+#Filenames and Paths 
+def write_file_5():
+    """
+    Every running program has a "current directory", which is the default
+    directory for most operations. 
+    
+    """
+    CurrentWorkingDirectory = os.getcwd()
+    print(CurrentWorkingDirectory,"\n") # prints -> C:\Users\Jasper Albert Nri\PycharmProjects\DS_and_Algo
+    # The string that is printed out here that identifies the path or directory is called a PATH.
+    """
+    RELATIVE PATH 
+    A Simple filename is also a path, but it is known as a RELATIVE PATH.
+    e.g -> memo.txt on it's own is known as a RELATIVE PATH, because it relates to the current directory.
+    If the current directory is /home/dinsdale, the filename memo.txt would refer to /home/dinsdale/memo.txt.
+    
+    ABSOLUTE PATH 
+    A path that begins with / does not depenf on the current directory;
+    it is called an ABSOLUTE PATH
+    
+    To find the absolute path to a file, you can use os.path.abspath:
+    
+    os.path provides other functions for working with filenames and paths. For example,
+    os.path.exists checks whether a file or directory exists:
+    """
     
     
+    print(os.path.abspath('Memo.py'))
+    print(os.path.exists('Recursion/MergeSort.py'))
+    print(os.path.isdir('/Recursion/MergeSort.py'))
+    print(os.path.exists('FilesOut.txt'))
+    print(os.listdir(CurrentWorkingDirectory))
     
-    values = fin.readline().strip()
-    print(values, type(values))
-    newvalues = values.split(', ')
-    print(newvalues[0], newvalues[1] )
-    print(newvalues, type(newvalues),len(newvalues),"\n")
+    
+    # A Function That loops through all of the files and folders in a given directory and prints them 
+    def walk(dirname):
+        for name in os.listdir(dirname):
+            path = os.path.join(dirname, name)
+        
+            if os.path.isfile(path):
+                print(path)
+            else:
+                walk(path)
     
     
-    newlist = []
-    
-    i = 0
-    j = 1
-    print(newlist)
-    while i < 15:
-        print(i , j)
-        newlist.append([newvalues[i]] + [int(newvalues[j])])
-        i +=2
-        j +=2
-    print(newlist, type(newlist),"\n\n\n")
-    
-    print("Printing The Original Dictionary")
-    original_dictionary = dict(zip(newkey, newlist))
-    print(original_dictionary, type(original_dictionary))
+    walk(CurrentWorkingDirectory)
 
-    def invert(dictionary):
-        inverse = dict()   
-        for key in dictionary:
-            value = dictionary[key]
-            for element in value:  
-                if element not in inverse:  
-                    inverse[element] = [key]
-                else:                           
-                    inverse[element].append(key)
 
-        #print(inverse)
-        return inverse  
-
-    inverted_dictionary = invert(original_dictionary)
-    print("\n\nPrinting The Inverted Dictionary")
-    print(inverted_dictionary)   
-    fout = open('test.txt', 'w')
-    fout.write("The inverted Dictionary is being printed out to the test.txt file \n  ->  %s" % inverted_dictionary)
+write_file_5()
 
 
 
-test()
+# Catching Exceptions
+def write_file_6():
 
 
-# ileft =[]
-# jright =[]
-# lisad = [1, '2', 3, '4', 5, '6', 7, '8']
-# plisa = ['a', 'b', 'c', 'd', 'e', 'f', 'g']
-# while i < 8:
-#     print(i , j)
-#     complicado = ileft + jright
-#     ileft.append([newvalues[i]])
-#     jright.append([int(newvalues[j])])
-#     i +=2
-#     j +=2
-# print(complicado)
+
+
+
+
+
+
+
+
+
+
+
+
+write_file_6()
+
+
+
+
+
+
+
+
+
+
+
+
+
