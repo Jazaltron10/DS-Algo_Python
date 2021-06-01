@@ -102,7 +102,7 @@ def Local_variable_function():
     age = 19
     print("My name is " + name + " and i am " + str(age) +" years old \n") 
 
-print(20 + age)    
+#print(20 + age)    
 Local_variable_function()
 
 
@@ -136,7 +136,7 @@ def Example_4(parameter_unique):
     return parameter_unique + 20
     
 print(Example_4(30))
-print(parameter_unique + 50)    
+#print(parameter_unique + 50)    
 
 
 # Traceback (most recent call last):

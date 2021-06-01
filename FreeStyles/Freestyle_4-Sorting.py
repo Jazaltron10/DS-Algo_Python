@@ -8,7 +8,7 @@ def sortedSquaredArray(array):
     for item in array:
         newitem = item**2
         exponent.append(newitem)
-    
+    #exponent.sort()
     return exponent
 
 	

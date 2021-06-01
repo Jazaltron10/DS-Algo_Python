@@ -29,6 +29,8 @@ print(list_1)
 list_1[0:2] = [3, 5]
 print(list_1)
 
+
+# Another Method of adding elements to a list 
 list_2 = ['a','b','c','d','e']
 list_1.extend(list_2) # This just appends list_2 to the existing list 
 print(list_1)
@@ -139,6 +141,7 @@ this is the inverse of the split Method.
 it takes a list of strings and concatenates the elements.
 Join is a string method,
 So you have to invoke it on the delimeter and pass the list as a parameter
+So basically join is a method that is used to convert lists back to strings 
 Example
 """
 
@@ -151,7 +154,7 @@ print(meg)
 
 
 """
-OBJECTS AND VALUES
+OBJECTS AND VALUES 
 To check whether two variables refer to the same object, you can use the is operator.
 """
 

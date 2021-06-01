@@ -133,7 +133,7 @@ print(binary_search(arr, 8))
 numbers = [1,2,3,4,5,6,7,8,9,10]
 list_names = ['david', 'john', 'mary', 'damien']
 
-name = input()
+name = input("Please type in the name that you want to search ")
 
 def List_String_Search(list, target):
     """
@@ -141,8 +141,8 @@ def List_String_Search(list, target):
     """
     for i in range(0, len(list)):
         if list[i] == target:
-            print(list[i], " is in the list at index ", i)
-    print(target, 'not in list')
+            print(list[i], "is in the list at index ", i)
+    print(target, 'not in list') # will still print because the conditional at the top is not checking for not equal to target
 
         
 
