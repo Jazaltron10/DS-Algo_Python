@@ -153,3 +153,57 @@ def fourth():
         return name, year
     
     dict_items (d)
+
+    
+    
+import os
+
+cwd = os.getcwd()
+
+try:
+    fin = open(cwd, 'r')
+    print('Reading file succeeded')
+except IsADirectoryError:
+    print('Is a directory')
+except FileNotFoundError:
+    print('No such file exists')
+except PermissionError:
+    print('Not your business')
+except:
+    print('Some other bug')
+
+try:
+    fin = open('test_dir', 'r')
+    print('Reading file succeeded')
+except IsADirectoryError:
+    print('Is a directory')
+except FileNotFoundError:
+    print('No such file exists')
+except PermissionError:
+    print('Not your business')
+except:
+    print('Some other bug')
+
+try:
+    fin = open(cwd +'/test_dir', 'r')
+    print('Reading file succeeded')
+except IsADirectoryError:
+    print('Is a directory')
+except FileNotFoundError:
+    print('No such file exists')
+except PermissionError:
+    print('Not your business')
+except:
+    print('Some other bug')
+
+try:
+    fin = open('/test_dir', 'r')
+    print('Reading file succeeded')
+except IsADirectoryError:
+    print('Is a directory')
+except FileNotFoundError:
+    print('No such file exists')
+except PermissionError:
+    print('Not your business')
+except:
+    print('Some other bug')
