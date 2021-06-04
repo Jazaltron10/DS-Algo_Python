@@ -19,10 +19,7 @@ def recursive_sum(numbers):
 
 
 print(recursive_sum([1,2,3,3,5,6,7]))
-
-
 """
 1. A Recursive Function needs a recursive case that causes it to call itself
 2. And it also needs to eventually reach a base case that causes the recursion to stop  
-    
 """
