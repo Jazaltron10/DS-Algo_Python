@@ -23,3 +23,14 @@ print(recursive_sum([1,2,3,3,5,6,7]))
 1. A Recursive Function needs a recursive case that causes it to call itself
 2. And it also needs to eventually reach a base case that causes the recursion to stop  
 """
+myNums = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 };
+print(myNums)
+
+def print_n(s, n):
+    if n <= 0:
+        return
+    print(s)
+    print_n(s, n-1)
+    
+    
+print_n("james", 5)    
