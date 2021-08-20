@@ -1,11 +1,11 @@
-#### Data Structures 
+# **Data Structures** 
 A data structure is a data storage format. it is the collection of values and the 
 format they are stored in, the relationships between the values in the collection as
 well as the operations applied on the data stored in the structure 
 
 
-##### Arrays 
-+ Analogy a collection of train carts 
+>## **Arrays** 
++    Analogy a collection of train carts 
 + They can be homogeneous(java, C++) or heterogeneous(Python) structures
 + The fundamental concept of arrays are their **indexes**
 + They are used for every operations on the array, By operations i mean: 
@@ -15,13 +15,13 @@ well as the operations applied on the data stored in the structure
   beside each other with no gaps  
 + most programming languages uses a 0 index
 
-####### Operations on Data Structures
+>## **Operations on Data Structures**
 + Access and read values 
 + Search for an arbitrary value
 + Insert values at any point into the structure
 + Delete values in the structure
 
-########## Insert  operations 
+>## **Insert  operations**
 + adding at the beginning of the list 
 + list resizing growth pattern in python is 
 + 0,4,8,16.25,35,46...
@@ -36,20 +36,18 @@ well as the operations applied on the data stored in the structure
         numbers.append(2)
         print(numbers)
         
-       also 
-       numbers = []
-       numbers.extend([4,5,6])
-       print(numbers)               # gives you =>[4, 5, 6]
+        also 
+        numbers = []
+        numbers.extend([4,5,6])
+        print(numbers)               # gives you =>[4, 5, 6]
        
 
-######## Building a Linked List 
+>## **Building a Linked List** 
 + Why do we build a data structure 
 + each data structure solves a specific problem
-+ A linked list is a linear data structure where each element in the list is 
-  contained in a separate object called a node 
-> + A node models two pieces of information 
->>  an individual item of the data we want to store
->>  and a reference to the next node in the list 
++ A linked list is a linear data structure where each element in the list is contained in a separate object called a node.<br> 
+  
+        A node models two pieces of information, an individual item of the data we want to store and a reference to the next node in the list 
 
 + first node is called the head 
 + last node is called the tail, this denotes the end of the list  
@@ -61,43 +59,44 @@ well as the operations applied on the data stored in the structure
 + Doubly linked list points to both the next as well as the previous node on the list
 + Going from one node to the next is what is called **list traversal**
 
-###### Syntax
+>## **Syntax**
 
 
->>> l = LinkedList()
->>> N1 = Node(10)
->>> l.head = N1
->>> l.size()
-1  
+      >>> l = LinkedList()
+      >>> N1 = Node(10)
+      >>> l.head = N1
+      >>> l.size()
+      1  
 
 
-$ python -i Linked_List.py
->>> l = LinkedList() 
->>> l.add(1)
->>> l.add(2)
->>> l.add(3)
->>> l.add(4)
->>> l.add(-5)
->>> l
-[Head: -5]-> [4]-> [3]-> [2]-> [Tails: 1]
->>>
+    $ python -i Linked_List.py
+    >>> l = LinkedList() 
+    >>> l.add(1)
+    >>> l.add(2)
+    >>> l.add(3)
+    >>> l.add(4)
+    >>> l.add(-5)
+    >>> l
+    [Head: -5]-> [4]-> [3]-> [2]-> [Tails: 1]
+    >>>
 
 
-######## Searching
->>> l = LinkedList()   
->>> l.add(23)
->>> l.add(96)
->>> l.add(98)
->>> l.add(546)
->>> l.add(623)
->>> n = l.search(2) 
->>> n
->>> n = l.search(23)
->>> n
-<Node data: 23>
->>> l
-[Head: 623]-> [546]-> [98]-> [96]-> [Tails: 23]
->>>
+>## **Searching**
+    
+    >>> l = LinkedList()   
+    >>> l.add(23)
+    >>> l.add(96)
+    >>> l.add(98)
+    >>> l.add(546)
+    >>> l.add(623)
+    >>> n = l.search(2) 
+    >>> n
+    >>> n = l.search(23)
+    >>> n
+    <Node data: 23>
+    >>> l
+    [Head: 623]-> [546]-> [98]-> [96]-> [Tails: 23]
+    >>>
 
 
 
