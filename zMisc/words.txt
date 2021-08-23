@@ -1,0 +1,3 @@
+52
+I have spotted 43 amels.
+In 3 years I have spotted 0.1 camels.The inverted Dictionary is {1: 'anjani', 2: 'cadoga', 3: 'smilokiva', 4: 'jipeeta', 5: 'karaskovich'} -> 
