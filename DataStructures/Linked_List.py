@@ -143,3 +143,25 @@ class LinkedList:
 
             current = current.next_node
         return '-> '.join(nodes)
+    
+    
+    
+    
+l = LinkedList()
+l.add(23)
+l.add(31)
+l.add(58)
+l.add(69)
+l.add(34)
+l.add(87)
+l.add(97)
+l.add(29)
+l.add(38)
+l.add(57)
+l.add(67)
+l.add(39)
+l.add(89)
+l.add(19)
+
+
+print(l)
