@@ -42,12 +42,45 @@ target = 100
 res = twons(ar, target)
 print(res)
 
-# Multiplictaion table
-s = ""
-for i in range(12):
-    i+=1
-    for j in range(12):
-        j +=1
-        s += " "+str( i*j)
-    print("\n" + s)
-    s = ""
+
+
+    
+    
+def palindrome(string):
+    i = len(string)-1 # last index of the string
+    j = 0
+    print("The string is a %s" % (string))
+    while j < len(string):
+        if string[i] != string[j]: #and rev == name:
+            print("not palindrome")
+            return False
+        j+=1
+        i-=1      
+        
+    print("palindrome")
+    return True    
+    
+    
+    
+faf = palindrome("abcdcba")
+print(faf, "\n")
+faf = palindrome("abbaQ")
+print(faf)    
+    
+    
+    
+
+    
+    
+    
+# def is_reverse(word1, word2):
+#     if len(word1) != len(word2):
+#         return False
+#     i = 0
+#     j = len(word2)
+#     while j > 0:
+#         if word1[i] != word2[j]:
+#             return False
+    
+#     j = j-1
+#     return True

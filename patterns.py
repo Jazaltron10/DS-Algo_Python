@@ -35,3 +35,12 @@ for i in range(1, 5):
         print("World")
 
 
+# Multiplictaion table
+s = ""
+for i in range(12):
+    i+=1
+    for j in range(12):
+        j +=1
+        s += " "+str( i*j)
+    print("\n" + s)
+    s = ""
