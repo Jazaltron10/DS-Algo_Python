@@ -24,7 +24,7 @@ I tried it I kept getting a Type Error like this:
 TypeError: unhashable type: 'list'
 so I had to come up with a way to access the elements in the list and turn them into keys 
 the newly created dictionary.
-I was able to achieve this by introducing another for loop inside the already existing for a loop.
+I was able to achieve this by introducing another for loop inside the already existing for loop.
 This new for loop was meant to loop through each item in the value of the original dictionary which is a list 
 and while looping through it check to see if the contents of the list are already in the new dictionary, 
 if they were not, I would make each element the key in the new dictionary, and since the elements are primitive

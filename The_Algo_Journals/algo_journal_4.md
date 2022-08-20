@@ -1,13 +1,13 @@
-# This code here at the top is the same as we saw in the Bogosort
-# example. It just loads a Python list of numbers from a file.
-import sys
-# from load import load_numbers
+  # This code here at the top is the same as we saw in the Bogosort
+  # example. It just loads a Python list of numbers from a file.
+  import sys
+  # from load import load_numbers
 
-numbers =  [54, 62, 93, 17, 31, 65, 23, 32, 98, 20, 79, 69, 89, 26, 27, 22,29, 100, 1, 2, 57, 28, 88, 3, 50, 67, 37, 1, 32, 20, 97]# load_numbers(sys.argv[1])
+  numbers =  [54, 62, 93, 17, 31, 65, 23, 32, 98, 20, 79, 69, 89, 26, 27, 22,29, 100, 1, 2, 57, 28, 88, 3, 50, 67, 37, 1, 32, 20, 97]# load_numbers(sys.argv[1])
 
-# Let's implement the function that will do our selection sort.
-# We're going to pass in our Python list containing all the unsorted
-# numbers.
+  # Let's implement the function that will do our selection sort.
+  # We're going to pass in our Python list containing all the unsorted
+  # numbers.
 def selection_sort(values):
   # We'll create an empty list that will hold all our sorted values.
   sorted_list = []

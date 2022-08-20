@@ -7,7 +7,7 @@
 
 
 >## consistent results for the same set of values is how we know that an algorithm is correct
-### correctness and efficiency
+### *correctness and efficiency*
 +     best case 
 +     average case
 +     worst case 
