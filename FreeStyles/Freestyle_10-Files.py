@@ -1,5 +1,5 @@
 """
-# This Section dealls with files 
+# This Section deals with files 
 import math
 
 table = [5]
