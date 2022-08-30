@@ -28,7 +28,7 @@ print('one' in eng2sp,'four' in eng2sp)
 
 # To check if a value exist within a dictionary 
 # You would have to go through two step process 
-# First process = you use the values method onthe dictionary and assign it to a variable {This returns a collection of the values}
+# First process = you use the values method on the dictionary and assign it to a variable {This returns a collection of the values}
 # Second process = you then use the "in" operator 
 
 vals = eng2sp.values()

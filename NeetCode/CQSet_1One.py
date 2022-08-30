@@ -37,7 +37,12 @@ print (abs(nums))
     # }
 
 def containsduplicates():
-    if
+    s = 'If i slap you no one would recognize you'
+    t = s.split('i')
+    print(t)
+    
+    
+containsduplicates()
 
 
 
