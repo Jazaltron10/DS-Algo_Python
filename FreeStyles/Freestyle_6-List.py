@@ -32,7 +32,7 @@ print(list_1)
 
 # Another Method of adding elements to a list 
 list_2 = ['a','b','c','d','e']
-list_1.extend(list_2) # This just appends list_2 to the existing list 
+list_1.extend(list_2) # This just appends list_2 to the existing list  # type: ignore
 print(list_1)
 
 list_3 = [2,4,6,8,-6,-4,-2]
@@ -252,7 +252,7 @@ rest = tail(t4)
 print(rest)
 
 
-"""
+""" 
 PITFALLS
 
 

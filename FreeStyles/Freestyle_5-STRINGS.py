@@ -236,9 +236,9 @@ print(word.lower())
 print(word.islower())
 # Slices return the first but exclude the last = s[n:m] m does not get returned 
 n = 10000
-count = 0
+count = 0 # type: ignore
 while n:
-    count = count + 1
+    count = count + 1 # type: ignore
     n = n // 10
 print (count)
 
