@@ -1,4 +1,5 @@
 print("La Sectiona De DickiShionarey\n")
+print("Sección del Diccionario.\n")
 
 # Starting 
 eng2sp = dict()
