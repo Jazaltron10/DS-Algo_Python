@@ -25,7 +25,7 @@ print(sorted_list)
 List =  [54, 62, 93, 17, 31, 65, 23, 32, 98, 20, 79, 69, 89, 26, 27, 22,29, 100, 1, 2, 57, 28, 88, 3, 50, 67, 37, 1, 32, 20, 97]
 
 
-def merge(values):
+def merge(values): # type: ignore
     if len(values) <= 1:
         return values
     
