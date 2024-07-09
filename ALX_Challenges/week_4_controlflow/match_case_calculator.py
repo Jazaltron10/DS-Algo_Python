@@ -17,16 +17,16 @@ def calculator():
             result = num_1 * num_2
             print(f"The result is {result}")
         
-        case "/" if num_2 == 0:
-            print(f"Cannot divide by zero")
-            
-        case "/":
-            result = num_1 / num_2
-            print(f"The result is {result}")
+        case "/": 
+            if num_2 == 0:
+                print(f"Cannot divide by zero")
+            else:
+                result = num_1 / num_2
+                print(f"The result is {result}")
             
         case _ :
             print(f"Only numbers allowed")
-            
+    
 
 
 calculator()

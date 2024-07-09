@@ -36,11 +36,6 @@ def comb_dict (x, y):
 comb_dict (a, b)
 
 
-
-
-
-
-
 def second():
     print ('\nDemonstrating tuples')
 
@@ -131,10 +126,6 @@ def third():
         return b
 
     count_dict (a)
-
-
-
-
 
 
 def fourth():
